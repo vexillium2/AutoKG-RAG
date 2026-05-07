@@ -1,0 +1,55 @@
+# 原始数据（体积大，不进仓库）
+data/pubmed/
+data/pmids/
+data/re/
+data/bioasq/
+
+# 模型权重
+*.bin
+*.safetensors
+*.ckpt
+*.pt
+models/
+kazu_model_pack/
+
+# 中间产物（体积大或含原始数据）
+data/mentions/
+data/triples/
+data/faiss/
+# 开源发布数据（data/kg_release/ 不在此列，进仓库）
+
+# 实验结果（本地生成，不进仓库）
+results/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 日志
+*.log
+outputs/
+logs/
+
+# Neo4j数据
+neo4j_data/
+
+# 敏感配置
+.env
+*.env.local
+
+# macOS
+.DS_Store
+
+# conda/pip缓存
+.conda/
+*.egg-info/

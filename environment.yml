@@ -1,0 +1,29 @@
+name: biokg-rag
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - torch==2.7.0 --index-url https://download.pytorch.org/whl/cu128
+    - transformers==4.51.3
+    - datasets==4.8.5
+    - accelerate==0.34.0
+    - bitsandbytes>=0.45.0     # Blackwell (sm_120) 需要 0.45+
+    - kazu==2.3.0
+    - neo4j==5.19.0
+    - faiss-gpu-cu12            # cu12 版本，替代旧的 faiss-gpu==1.7.4
+    - sentence-transformers==2.7.0
+    - lxml==5.1.0
+    - requests==2.31.0
+    - tqdm==4.66.2
+    - hydra-core==1.3.2
+    - omegaconf==2.3.0
+    - scikit-learn==1.4.1
+    - numpy==1.26.4
+    - pandas==2.2.1
+    - pyyaml==6.0.1
